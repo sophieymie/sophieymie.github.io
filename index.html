@@ -1,0 +1,309 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Genhancer Supplementary Page</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/grid/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="grid.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="container">
+
+      <h1>Genhancer: High-Fidelity Speech Enhancement via Generative Modeling on Discrete Codec Tokens</h1>
+      <!-- <p class="lead">Submission to Interspeech 2024</p> -->
+
+      <p>This page provides audio samples and supplementary materials of paper <i>Genhancer: High-Fidelity Speech Enhancement via Generative Modeling on Discrete Codec Tokens</i>. This paper is in submission to <strong>Interspeech 2024</strong>.</p>
+
+      <ul>
+        <li><a href="#audiosamples">Audio samples</a>
+          <ul>
+            <li><a href="#closer">Closer comparison with other models</a></li>
+            <li><a href="#ablations">Ablations</a></li>  
+            <li><a href="#more">Link to more samples</a></li>  
+          </ul>
+        </li>
+
+        <li><a href="#supplement">Supplement</a>
+          <ul>
+            <li><a href="#design">Network design</a></li>
+            <li><a href="#training">Training setup</a></li>  
+          </ul>
+
+        </li>
+      </ul>  
+
+      <h3 id='audiosamples'>Audio samples </h3>
+      <h4 id='closer'>Between comparison models</h4>
+          <p>This session aims at a closer comparison between different models. The samples are collected from comparion models' demo pages. If applicable, we present the provided enhanced samples from each model's own webpages. All the Genhancer samples are from the <i>MaskGIT+Whisper</i> model.</p>
+
+      
+      <!-- <ul><li><strong>Sample 1 (Miipher demo)</strong></li></ul> -->
+     <strong> &nbsp &nbsp Sample 1 (<a href="https://google.github.io/df-conformer/miipher/">Miipher demo</a>)</strong>
+      <div class="row text-center">
+        <div class="col-sm-2"><strong><br>Clean</strong> <br><audio controls=''>
+                  <source src="audio/s1_clean.wav"/>
+                </audio></div>
+        <div class="col-sm-2"><strong><br>Degraded<br> <audio controls=''>
+                  <source src="audio/s1_noisy.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>Miipher w/o text(Original)<br> <audio controls=''>
+                  <source src="audio/s1_miipher_wo_text.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>Miipher w/ text(Original) <br> <audio controls=''>
+                  <source src="audio/s1_miipher_w_text.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2 "><strong><br>HiFi-GAN-2<br> <audio controls=''>
+                  <source src="audio/s1_hifigan2.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2 text-warning"><strong><br>Genhancer<br> <audio controls=''>
+                  <source src="audio/s1_genhancer.wav"/>
+                </audio></strong></div>
+      </div>
+
+      <strong> &nbsp &nbsp Sample 2 (<a href="https://google.github.io/df-conformer/miipher/">Miipher demo</a>)</strong>
+      <div class="row text-center">
+        <div class="col-sm-2"><strong>Degraded<br> <audio controls=''>
+                  <source src="audio/s2_noisy.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>Miipher(Original)<br> <audio controls=''>
+                  <source src="audio/s2_miipher.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>StoRm <br> <audio controls=''>
+                  <source src="audio/s2_storm.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>HiFi-GAN-2<br> <audio controls=''>
+                  <source src="audio/s2_hifigan2.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>Genhancer<br> <audio controls=''>
+                  <source src="audio/s2_genhancer.wav"/>
+                </audio></strong></div>
+      </div>
+
+      <div>
+<!--       <strong> &nbsp &nbsp Sample 3 (<a href="https://dns-gen.github.io/">Low-latency SE demo</a>)</strong>
+
+      <div class="row text-center">
+        <div class="col-sm-2"><strong><br>Degraded<br> <audio controls=''>
+                  <source src="audio/s3_noisy.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>Low-latency SE (original)<br> <audio controls=''>
+                  <source src="audio/s3_low_latency.wav"/>
+                </audio></strong></div>      
+        <div class="col-sm-2"><strong><br>Miipher<br> <audio controls=''>
+                  <source src="audio/s3_miipher.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong><br>StoRm <br> <audio controls=''>
+                  <source src="audio/s3_storm.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong><br>HiFi-GAN-2<br> <audio controls=''>
+                  <source src="audio/s3_hifigan2.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong><br>Genhancer<br> <audio controls=''>
+                  <source src="audio/s3_genhancer.wav"/>
+                </audio></strong></div>
+
+        <p class='text-left'>As a non-generative model, HiFi-GAN-2 is more susceptible to the severer audio intereference of the input, although it was able to preserve the content to a fairly good extend. In contrast, all other generative models provide a cleaner acoustic environment. </p>
+      </div> -->
+        
+
+      <strong> &nbsp &nbsp Sample 3 (<a href="https://dns-gen.github.io/">Low-latency SE demo</a>)</strong>
+      <div class="row text-center">
+        <div class="col-sm-2"><strong><br>Clean<br> <audio controls=''>
+                  <source src="audio/s3_clean.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong><br>Degraded<br> <audio controls=''>
+                  <source src="audio/s3_noisy.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>Low-latency SE (Original)<br> <audio controls=''>
+                  <source src="audio/s3_low_latency.wav"/>
+                </audio></strong></div>      
+        <div class="col-sm-2"><strong><br>Miipher<br> <audio controls=''>
+                  <source src="audio/s3_miipher.wav"/>
+                </audio></strong></div>
+<!--         <div class="col-sm-2"><strong>StoRm <br> <audio controls=''>
+                  <source src="audio/s4_storm.wav"/>
+                </audio></strong></div> -->
+        <div class="col-sm-2"><strong><br>HiFi-GAN-2<br> <audio controls=''>
+                  <source src="audio/s3_hifigan2.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong><br>Genhancer<br> <audio controls=''>
+                  <source src="audio/s3_genhancer.wav"/>
+                </audio></strong></div>
+      </div>
+
+      <strong> &nbsp &nbsp Sample 4 (<a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm">StoRm demo</a>)</strong>
+
+      <div class="row text-center">
+        <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
+                  <source src="audio/s4_clean.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>Degraded<br> <audio controls=''>
+                  <source src="audio/s4_noisy.wav"/>
+                </audio></strong></div>   
+        <div class="col-sm-2"><strong>Miipher<br> <audio controls=''>
+                  <source src="audio/s4_miipher.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>StoRm (Original) <br> <audio controls=''>
+                  <source src="audio/s4_storm.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>HiFi-GAN-2<br> <audio controls=''>
+                  <source src="audio/s4_hifigan2.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>Genhancer<br> <audio controls=''>
+                  <source src="audio/s4_genhancer.wav"/>
+                </audio></strong></div>
+        <div><p> &nbsp In the tail, a soft female voice cut in, which is leaked into some enhanced samples, and/or causes EQ distortion at the end. Genhancer is robust to this noise.</p></div>
+      </div>
+
+      
+
+
+      <strong> &nbsp &nbsp Sample 5 (<a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm">StoRm demo</a>)</strong>
+
+      <div class="row text-center">
+        <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
+                  <source src="audio/s5_clean.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>Degraded<br> <audio controls=''>
+                  <source src="audio/s5_noisy.wav"/>
+                </audio></strong></div>   
+        <div class="col-sm-2"><strong>Miipher<br> <audio controls=''>
+                  <source src="audio/s5_miipher.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>StoRm (Original) <br> <audio controls=''>
+                  <source src="audio/s5_storm.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>HiFi-GAN-2<br> <audio controls=''>
+                  <source src="audio/s5_hifigan2.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>Genhancer<br> <audio controls=''>
+                  <source src="audio/s5_genhancer.wav"/>
+                </audio></strong></div>
+        <p class="text-left"> This sample shows Genhancer is robust to strong reverberation. Meanwhile as a non-generative model, HiFi-GAN-2 is more susceptible to the adversial audio effect from input, although it was able to preserve the content to a fairly good extend. In contrast, all other generative models provide a much cleaner acoustic environment.</p>
+      </div>
+
+      
+
+      <strong> &nbsp &nbsp Sample 6 (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE demo</a>)</strong>
+      <div class="row text-center">
+        <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
+                  <source src="audio/s6_clean.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>Degraded<br> <audio controls=''>
+                  <source src="audio/s6_noisy.wav"/>
+                </audio></strong></div>   
+        <div class="col-sm-2"><strong>Miipher<br> <audio controls=''>
+                  <source src="audio/s6_miipher.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>UNIVERSE (Original) <br> <audio controls=''>
+                  <source src="audio/s6_universe.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>StoRm <br><audio controls=''>
+                  <source src="audio/s6_storm.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>HiFi-GAN-2<br> <audio controls=''>
+                  <source src="audio/s6_hifigan2.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2"><strong>Genhancer<br> <audio controls=''>
+                  <source src="audio/s6_genhancer.wav"/>
+                </audio></strong></div>
+      </div>
+
+
+      <strong> &nbsp &nbsp Sample 7 (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE demo</a>)</strong>
+      <div class="row text-center">
+              <div class="col-sm-2"><strong>Degraded<br> <audio controls=''>
+                        <source src="audio/s7_noisy.wav"/>
+                      </audio></strong></div>   
+              <div class="col-sm-2"><strong>Miipher<br> <audio controls=''>
+                        <source src="audio/s7_miipher.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong>UNIVERSE (Original) <br> <audio controls=''>
+                        <source src="audio/s7_universe.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong>StoRm <br><audio controls=''>
+                        <source src="audio/s7_storm.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong>HiFi-GAN-2<br> <audio controls=''>
+                        <source src="audio/s7_hifigan2.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong>Genhancer<br> <audio controls=''>
+                        <source src="audio/s7_genhancer.wav"/>
+                      </audio></strong></div>
+            </div>
+
+
+      <strong> &nbsp &nbsp Sample 8 (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE demo</a>)</strong>
+      <div class="row text-center">
+              <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
+                        <source src="audio/s8_clean.wav"/>
+                      </audio></strong></div>   
+              <div class="col-sm-2"><strong>Degraded<br> <audio controls=''>
+                        <source src="audio/s8_noisy.wav"/>
+                      </audio></strong></div>   
+              <div class="col-sm-2"><strong>Miipher<br> <audio controls=''>
+                        <source src="audio/s8_miipher.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong>UNIVERSE (Original) <br> <audio controls=''>
+                        <source src="audio/s8_universe.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong>StoRm <br><audio controls=''>
+                        <source src="audio/s8_storm.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong>HiFi-GAN-2<br> <audio controls=''>
+                        <source src="audio/s8_hifigan2.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong>Genhancer<br> <audio controls=''>
+                        <source src="audio/s8_genhancer.wav"/>
+                      </audio></strong></div>
+            </div>
+
+      <!-- </ul> -->
+      <h4 id='ablations'>Ablations</h4>
+          <p>This section compares different variants of Genhancer. </p>
+
+      <h4 id="more">More samples</h4>
+          <p>We also provide the first 10 samples of each evaluation set, i.e. DAPS, AQECC and DEMO, at this <a href="https://dns-gen.github.io/">link</a> for reference.</p>
+
+
+      <h3 id='supplement'>Supplement</h3>
+      <h4 id="design">Network design</h4>
+      <!-- <br> -->
+      <p>-<strong> Feedforward noisy branch</strong></p>
+      <p><img src='imgs/ff_network.png'></p>
+      <p>-<strong> Token Generator</strong></p>
+      <p><img src='imgs/generator.png'></p>
+
+
+      <ul>
+        <li>Q = 9, number of codebooks in DAC</li>
+        <li>D = 8, code dimension by DAC</li>
+        <li>S = 4096, codebook size by DAC</li>
+        <li>C'= 256, C = 512</li>
+        <li>P = 1024, dimension of pretrained features</li>
+        <li>Caual convolutions are used for the auto-regressive generative pattern; non-causal convolutions for the rest.</li>
+       </ul>
+
+      <h4 id="training">Training setups</h4>
+      <ul>
+        <li>Batch size = 80; sample length = 8 seconds</li>
+        <li>AdamW optimizer with betas = (0.9, 0.95) and weight decay = 0.01</li>
+        <li>Learning rate linearly increases to 1e-4 in the first 1k steps, and decays to 1e-5 following cosine schedule in 300k steps.</li>
+       </ul>
+
+    </div> <!-- /container -->
+  </body>
+</html>
