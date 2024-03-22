@@ -51,7 +51,10 @@
 
       
       <!-- <ul><li><strong>Sample 1 (Miipher demo)</strong></li></ul> -->
-     <strong> &nbsp &nbsp Sample 1 (<a href="https://google.github.io/df-conformer/miipher/">Miipher demo</a>)</strong>
+      <!-- <span> -->
+     <strong> Sample 1 (<a href="https://google.github.io/df-conformer/miipher/">Miipher demo</a>)</strong>
+     - <i>Transcript: Attempting to appease dictatorial regimes with custom beanie babies is a tried and true strategy.</i>
+     <br> Without any transcription prompt, Genhancer is able to recover the content well, better than both the Miipher without text prompt, and HiFi-GAN-2. 
       <div class="row text-center">
         <div class="col-sm-2"><strong><br>Clean</strong> <br><audio controls=''>
                   <source src="audio/s1_clean.wav"/>
@@ -73,7 +76,11 @@
                 </audio></strong></div>
       </div>
 
-      <strong> &nbsp &nbsp Sample 2 (<a href="https://google.github.io/df-conformer/miipher/">Miipher demo</a>)</strong>
+
+
+      <strong>Sample 2 (<a href="https://google.github.io/df-conformer/miipher/">Miipher demo</a>)</strong>
+      - <i>Transcript: Access my vimeo service to play music from Bernhard Fleischmann.</i>
+      <br>This samples shows an example of difficult degradation compounding reverberation and severe pitch distortion, a case that Genhancer didn't see during training. It was able to generate a relatively clean audio, but with certain hullacinated segments.
       <div class="row text-center">
         <div class="col-sm-2"><strong>Degraded<br> <audio controls=''>
                   <source src="audio/s2_noisy.wav"/>
@@ -91,6 +98,8 @@
                   <source src="audio/s2_genhancer.wav"/>
                 </audio></strong></div>
       </div>
+  <!-- </span> -->
+
 
       <div>
 <!--       <strong> &nbsp &nbsp Sample 3 (<a href="https://dns-gen.github.io/">Low-latency SE demo</a>)</strong>
@@ -119,7 +128,8 @@
       </div> -->
         
 
-      <strong> &nbsp &nbsp Sample 3 (<a href="https://dns-gen.github.io/">Low-latency SE demo</a>)</strong>
+      <strong> Sample 3 (<a href="https://dns-gen.github.io/">Low-latency SE demo</a>)</strong>
+      - Here is an example where background switches among different noisy and effect, it's thus particularly important to maintain a global coherence on speaker and prosody. 
       <div class="row text-center">
         <div class="col-sm-2"><strong><br>Clean<br> <audio controls=''>
                   <source src="audio/s3_clean.wav"/>
@@ -144,8 +154,8 @@
                 </audio></strong></div>
       </div>
 
-      <strong> &nbsp &nbsp Sample 4 (<a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm">StoRm demo</a>)</strong>
-
+      <strong> Sample 4 (<a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm">StoRm demo</a>)</strong>
+      - Appearing in the tail is a soft female voice, which is leaked into some enhanced samples, and/or causes EQ distortion at the end. Genhancer is robust to the intereference from another human voice to an extend.</p>
       <div class="row text-center">
         <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
                   <source src="audio/s4_clean.wav"/>
@@ -165,13 +175,13 @@
         <div class="col-sm-2"><strong>Genhancer<br> <audio controls=''>
                   <source src="audio/s4_genhancer.wav"/>
                 </audio></strong></div>
-        <div><p> &nbsp In the tail, a soft female voice cut in, which is leaked into some enhanced samples, and/or causes EQ distortion at the end. Genhancer is robust to this noise.</p></div>
       </div>
 
       
 
 
-      <strong> &nbsp &nbsp Sample 5 (<a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm">StoRm demo</a>)</strong>
+      <strong>Sample 5 (<a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm">StoRm demo</a>)</strong>
+      - This sample shows Genhancer is robust to strong reverberation. Meanwhile, we can observe that as a non-generative model, HiFi-GAN-2 is more susceptible to the adversial audio effect from input, although it was able to preserve the content to a fairly good extend. In contrast, all other generative models provide a much cleaner acoustic environment.
 
       <div class="row text-center">
         <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
@@ -192,16 +202,17 @@
         <div class="col-sm-2"><strong>Genhancer<br> <audio controls=''>
                   <source src="audio/s5_genhancer.wav"/>
                 </audio></strong></div>
-        <p class="text-left"> This sample shows Genhancer is robust to strong reverberation. Meanwhile as a non-generative model, HiFi-GAN-2 is more susceptible to the adversial audio effect from input, although it was able to preserve the content to a fairly good extend. In contrast, all other generative models provide a much cleaner acoustic environment.</p>
+        
       </div>
 
       
 
-      <strong> &nbsp &nbsp Sample 6 (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE demo</a>)</strong>
+      <strong> Sample 6 (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE demo</a>)</strong>
+      - An example in a different language, that wasn't included in the training set.
       <div class="row text-center">
-        <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
+<!--         <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
                   <source src="audio/s6_clean.wav"/>
-                </audio></strong></div>
+                </audio></strong></div> -->
         <div class="col-sm-2"><strong>Degraded<br> <audio controls=''>
                   <source src="audio/s6_noisy.wav"/>
                 </audio></strong></div>   
@@ -214,16 +225,17 @@
         <div class="col-sm-2"><strong>StoRm <br><audio controls=''>
                   <source src="audio/s6_storm.wav"/>
                 </audio></strong></div>
-        <div class="col-sm-2"><strong>HiFi-GAN-2<br> <audio controls=''>
+<!--         <div class="col-sm-2"><strong>HiFi-GAN-2<br> <audio controls=''>
                   <source src="audio/s6_hifigan2.wav"/>
-                </audio></strong></div>
+                </audio></strong></div> -->
         <div class="col-sm-2"><strong>Genhancer<br> <audio controls=''>
                   <source src="audio/s6_genhancer.wav"/>
                 </audio></strong></div>
       </div>
 
 
-      <strong> &nbsp &nbsp Sample 7 (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE demo</a>)</strong>
+      <strong> Sample 7 (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE demo</a>)</strong>
+      - The speaker of this sample shows strong emotion by his changing pitch and tones in voice. In constrast to Miipher, Genhancer is capable of preserving the emotion, which we attribute to the use of codec token for providing more complete acoustic information. 
       <div class="row text-center">
               <div class="col-sm-2"><strong>Degraded<br> <audio controls=''>
                         <source src="audio/s7_noisy.wav"/>
@@ -246,7 +258,8 @@
             </div>
 
 
-      <strong> &nbsp &nbsp Sample 8 (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE demo</a>)</strong>
+      <strong> Sample 8 (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE demo</a>)</strong>
+      - An example of changing a speaker in the middle.
       <div class="row text-center">
               <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
                         <source src="audio/s8_clean.wav"/>
@@ -276,7 +289,7 @@
           <p>This section compares different variants of Genhancer. </p>
 
       <h4 id="more">More samples</h4>
-          <p>We also provide the first 10 samples of each evaluation set, i.e. DAPS, AQECC and DEMO, at this <a href="https://dns-gen.github.io/">link</a> for reference.</p>
+          <p>We also provide the first 10 samples of each evaluation set, i.e. DAPS, AQECC and DEMO, at this <a href="https://drive.google.com/drive/folders/1N42QxwzGR8rAFASkIAxi8CqQfBICa9JT?usp=drive_link">link</a> for reference.</p>
 
 
       <h3 id='supplement'>Supplement</h3>
