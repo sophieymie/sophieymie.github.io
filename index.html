@@ -31,7 +31,7 @@
         <li><a href="#audiosamples">Audio samples</a>
           <ul>
             <li><a href="#closer">Closer comparison with other models</a></li>
-            <li><a href="#ablations">Ablations</a></li>  
+            <li><a href="#ablations">Comparison among many variants of Genhance</a></li>  
             <li><a href="#more">Link to more samples</a></li>  
           </ul>
         </li>
@@ -46,8 +46,8 @@
       </ul>  
 
       <h3 id='audiosamples'>Audio samples </h3>
-      <h4 id='closer'>Between comparison models</h4>
-          <p>This session aims at a closer comparison between different models. The samples are collected from comparion models' demo pages. If applicable, we present the provided enhanced samples from each model's own webpages. All the Genhancer samples are from the <i>MaskGIT+Whisper</i> model.</p>
+      <h4 id='closer'>Closer comparison with other models</h4>
+          <p>This session provides a closer comparison among different models. The samples are collected from comparion models' demo pages. If applicable, we present the provided enhanced samples from each model's own webpages. All the Genhancer samples are from the <i>MaskGIT+Whisper</i> model.</p>
 
       
       <!-- <ul><li><strong>Sample 1 (Miipher demo)</strong></li></ul> -->
@@ -285,11 +285,83 @@
             </div>
 
       <!-- </ul> -->
-      <h4 id='ablations'>Ablations</h4>
-          <p>This section compares different variants of Genhancer. </p>
+      <h4 id='ablations'>Comparison among different variants of Genhance</h4>
+          <!-- <p>This section compares different variants of Genhancer. </p> -->
+      <strong> Sample 1 (Real-world speech content)</strong>
+      <div class="row text-center">
+<!--               <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
+                        <source src="audio/s8_clean.wav"/>
+                      </audio></strong></div>   --> 
+              <div class="col-sm-2"><strong><br>Degraded<br> <audio controls=''>
+                        <source src="audio/ab1_input.wav"/>
+                      </audio></strong></div>   
+              <div class="col-sm-2"><strong><br>AR+Whisper<br> <audio controls=''>
+                        <source src="audio/ab1_ar_wp.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong><br>MaskGIT+Whisper<br> <audio controls=''>
+                        <source src="audio/ab1_mg_wp.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong>MaskGIT+W2v-BERT2.0 <br><audio controls=''>
+                        <source src="audio/ab1_mg_wb.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong><br>MaskGIT+WavLM<br> <audio controls=''>
+                        <source src="audio/ab1_mg_wl.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong><br>FFDiscrete+Whisper<br> <audio controls=''>
+                        <source src="audio/ab1_ff.wav"/>
+                      </audio></strong></div>
+            </div>
+      <strong> Sample 2 (Miipher demo)</strong>
+      <div class="row text-center">
+<!--               <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
+                        <source src="audio/s8_clean.wav"/>
+                      </audio></strong></div>    -->
+              <div class="col-sm-2"><strong><br>Degraded<br> <audio controls=''>
+                        <source src="audio/ab2_input.wav"/>
+                      </audio></strong></div>   
+              <div class="col-sm-2"><strong><br>AR+Whisper<br> <audio controls=''>
+                        <source src="audio/ab2_ar_wp.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong><br>AR+WavLM<br> <audio controls=''>
+                        <source src="audio/ab2_ar_wl.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong><br>MaskGIT+Whisper<br> <audio controls=''>
+                        <source src="audio/ab2_mg_wp.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong>MaskGIT+W2v-BERT2.0 <br><audio controls=''>
+                        <source src="audio/ab2_mg_wb.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong><br>FFDiscrete+Whisper<br> <audio controls=''>
+                        <source src="audio/ab2_ff.wav"/>
+                      </audio></strong></div>
+            </div>
+      <strong> Sample 3 (DAPS)</strong>
+      <div class="row text-center">
+<!--               <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
+                        <source src="audio/s8_clean.wav"/>
+                      </audio></strong></div>    -->
+              <div class="col-sm-2"><strong><br>Degraded<br> <audio controls=''>
+                        <source src="audio/ab3_input.wav"/>
+                      </audio></strong></div>   
+              <div class="col-sm-2"><strong><br>AR+Whisper<br> <audio controls=''>
+                        <source src="audio/ab3_ar_wp.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong><br>AR+WavLM<br> <audio controls=''>
+                        <source src="audio/ab3_ar_wl.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong><br>MaskGIT+Whisper<br> <audio controls=''>
+                        <source src="audio/ab3_mg_wp.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong>MaskGIT+W2v-BERT2.0 <br><audio controls=''>
+                        <source src="audio/ab3_mg_wb.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong><br>FFDiscrete+Whisper<br> <audio controls=''>
+                        <source src="audio/ab3_ff.wav"/>
+                      </audio></strong></div>
+            </div>
 
       <h4 id="more">More samples</h4>
-          <p>We also provide the first 10 samples of each evaluation set, i.e. DAPS, AQECC and DEMO, at this <a href="https://drive.google.com/drive/folders/1N42QxwzGR8rAFASkIAxi8CqQfBICa9JT?usp=drive_link">link</a> for reference.</p>
+          <p>We also provide the first 10 samples of each evaluation set <a href="https://drive.google.com/drive/folders/1N42QxwzGR8rAFASkIAxi8CqQfBICa9JT?usp=drive_link">here</a>, from four variants of Genhancer, namely, <i>MaskGIT + Whisper</i>, <i>MaskGIT + W2v-BERT2.0</i>, <i>AR + Whisper</i> and <i>FFDiscrete + Whisper</i>.</p>
 
 
       <h3 id='supplement'>Supplement</h3>
