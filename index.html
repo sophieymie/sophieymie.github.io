@@ -53,7 +53,7 @@
       <!-- <ul><li><strong>Sample 1 (Miipher demo)</strong></li></ul> -->
       <!-- <span> -->
      <strong> Sample 1 (<a href="https://google.github.io/df-conformer/miipher/">Miipher demo</a>) - Reverb</strong>
-     <br> Without any transcription prompt, Genhancer is able to recover the content well, better than both the Miipher without text prompt, and HiFi-GAN-2. 
+     <br> Without any transcription prompt, Genhancer is able to recover the content well, comparable to Miipher with text, and clearly out-performs Miipher w/o text. 
 
       <div class="row text-center">
         <div class="col-sm-2"><strong><br>Clean</strong> <br><audio controls=''>
@@ -106,7 +106,7 @@
 
 
       <strong> Sample 3 (<a href="https://dns-gen.github.io/">Low-latency SE demo</a>) - Reverb + multiple noise</strong>
-      <br>Here is an example where background switches among different noisy and effect, it's thus particularly important to maintain a global coherence on speaker and prosody. 
+      <br>Here is an example where background switches among different noisy and effects, it's thus particularly important to maintain a global coherence on speaker and prosody. 
       <div class="row text-center">
         <div class="col-sm-2"><strong><br>Clean<br> <audio controls=''>
                   <source src="audio/s3_clean.wav"/>
@@ -134,7 +134,7 @@
 
       <strong> Sample 4 (<a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm">StoRm demo</a>)- Reverb + multiple noise</strong>
 
-      <br>Appearing in the tail is a soft female voice, which is leaked into some enhanced samples, and/or causes EQ distortion at the end. Genhancer is robust to the intereference from another human voice to an extend.</p>
+      <br>Appearing in the tail is a soft female voice, which is leaked into some enhanced samples, and/or causes EQ distortion. Genhancer is robust to this intereference.</p>
       <div class="row text-center">
         <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
                   <source src="audio/s4_clean.mp3"/>
@@ -160,7 +160,7 @@
 
       <strong>Sample 5 (<a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm">StoRm demo</a>) - Strong reverb</strong>
       <!-- <strong>Severe reverberation</strong> -->
-      <br>- This sample shows Genhancer is robust to strong reverberation. Meanwhile, we can observe that as a non-generative model, HiFi-GAN-2 is more susceptible to the adversial audio effect from input, although it was able to preserve the content to a fairly good extend. In contrast, all other generative models provide a much cleaner acoustic environment.
+      <br>This sample shows Genhancer is robust to strong reverberation. Meanwhile, we can observe that as a non-generative model, HiFi-GAN-2 is more susceptible to the adversial audio effect from input, although it was able to preserve the content to a fairly good extend. In contrast, all other generative models provide a much cleaner acoustic environment.
 
       <div class="row text-center">
         <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
@@ -218,7 +218,7 @@
 
       <strong> Sample 7 (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE demo</a>)</strong>
       <strong> - Out-of-distribution speech</strong>
-      <br>- The speaker of this sample shows strong emotion by his changing pitch and tones in voice. In constrast to Miipher, Genhancer is capable of preserving the emotion, which we attribute to the use of codec token for providing more complete acoustic information. 
+      <br>The speaker of this sample shows strong emotion by his changing pitch and tones in voice. In constrast to Miipher, Genhancer is capable of preserving the emotion, which we attribute to the use of codec token for providing more complete acoustic information. 
       <div class="row text-center">
               <div class="col-sm-2"><strong>Degraded<br> <audio controls=''>
                         <source src="audio/s7_noisy.wav"/>
