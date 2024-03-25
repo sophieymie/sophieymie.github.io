@@ -31,7 +31,7 @@
         <li><a href="#audiosamples">Audio samples</a>
           <ul>
             <li><a href="#closer">Closer comparison with other models</a></li>
-            <li><a href="#ablations">Comparison among many variants of Genhance</a></li>  
+            <li><a href="#ablations">Comparison among variants of Genhance</a></li>  
             <li><a href="#more">Link to more samples</a></li>  
           </ul>
         </li>
@@ -52,7 +52,7 @@
       
       <!-- <ul><li><strong>Sample 1 (Miipher demo)</strong></li></ul> -->
       <!-- <span> -->
-     <strong> Sample 1 (<a href="https://google.github.io/df-conformer/miipher/">Miipher demo</a>)</strong>     
+     <strong> Sample 1 (<a href="https://google.github.io/df-conformer/miipher/">Miipher demo</a>) - Reverb</strong>
      <br> Without any transcription prompt, Genhancer is able to recover the content well, better than both the Miipher without text prompt, and HiFi-GAN-2. 
 
       <div class="row text-center">
@@ -78,7 +78,7 @@
       </div>
 
 
-      <strong>Sample 2 (<a href="https://google.github.io/df-conformer/miipher/">Miipher demo</a>)</strong><!-- <strong> - Deverberation + noisy; Low SDR</strong> -->
+      <strong>Sample 2 (<a href="https://google.github.io/df-conformer/miipher/">Miipher demo</a>) - Reverb + noise</strong><!-- <strong> - Deverberation + noisy; Low SDR</strong> -->
       <!-- <strong>Unseen distortion</strong> -->
 <!--       <br>This samples shows an example of difficult degradation compounding reverberation and severe pitch distortion, a case that Genhancer didn't see during training. It was able to generate a relatively clean audio, but with certain hullacinated segments. -->
       <div class="row text-center">
@@ -105,7 +105,7 @@
       
 
 
-      <strong> Sample 3 (<a href="https://dns-gen.github.io/">Low-latency SE demo</a>)</strong>
+      <strong> Sample 3 (<a href="https://dns-gen.github.io/">Low-latency SE demo</a>) - Reverb + multiple noise</strong>
       <br>Here is an example where background switches among different noisy and effect, it's thus particularly important to maintain a global coherence on speaker and prosody. 
       <div class="row text-center">
         <div class="col-sm-2"><strong><br>Clean<br> <audio controls=''>
@@ -132,7 +132,7 @@
         
       </div>
 
-      <strong> Sample 4 (<a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm">StoRm demo</a>)</strong>
+      <strong> Sample 4 (<a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm">StoRm demo</a>)- Reverb + multiple noise</strong>
 
       <br>Appearing in the tail is a soft female voice, which is leaked into some enhanced samples, and/or causes EQ distortion at the end. Genhancer is robust to the intereference from another human voice to an extend.</p>
       <div class="row text-center">
@@ -158,7 +158,7 @@
       </div>
 
 
-      <strong>Sample 5 (<a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm">StoRm demo</a>)</strong>
+      <strong>Sample 5 (<a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm">StoRm demo</a>) - Strong reverb</strong>
       <!-- <strong>Severe reverberation</strong> -->
       <br>- This sample shows Genhancer is robust to strong reverberation. Meanwhile, we can observe that as a non-generative model, HiFi-GAN-2 is more susceptible to the adversial audio effect from input, although it was able to preserve the content to a fairly good extend. In contrast, all other generative models provide a much cleaner acoustic environment.
 
@@ -217,17 +217,17 @@
 
 
       <strong> Sample 7 (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE demo</a>)</strong>
-      <strong> - Out-of-distribution sample</strong>
+      <strong> - Out-of-distribution speech</strong>
       <br>- The speaker of this sample shows strong emotion by his changing pitch and tones in voice. In constrast to Miipher, Genhancer is capable of preserving the emotion, which we attribute to the use of codec token for providing more complete acoustic information. 
       <div class="row text-center">
               <div class="col-sm-2"><strong>Degraded<br> <audio controls=''>
                         <source src="audio/s7_noisy.wav"/>
                       </audio></strong></div>   
-              <div class="col-sm-2"><strong>Miipher<br> <audio controls=''>
-                        <source src="audio/s7_miipher.wav"/>
-                      </audio></strong></div>
               <div class="col-sm-2 text-success"><strong>Genhancer<br> <audio controls=''>
                         <source src="audio/s7_genhancer.wav"/>
+                      </audio></strong></div>
+              <div class="col-sm-2"><strong>Miipher<br> <audio controls=''>
+                        <source src="audio/s7_miipher.wav"/>
                       </audio></strong></div>
               <div class="col-sm-2"><strong>UNIVERSE (Original) <br> <audio controls=''>
                         <source src="audio/s7_universe.wav"/>
@@ -267,8 +267,9 @@
                       </audio></strong></div>
               
             </div>
-      <strong> Sample 9 (<a href="https://github.com/Bose/devo/tree/main/audio/">DEVO demo</a>)</strong>
+      <strong> Sample 9 (<a href="https://github.com/Bose/devo/tree/main/audio/">DEVO demo</a>) - Reverb + sharp noise</strong>
      <!--  <br>Out of all generative and non-generative methods, Genhancer provides the most faithful content reconstruction. --> 
+     <br> Genhance produces correct content and stable pitch, prosody and speaker. 
       <div class="row text-center">
               <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
                         <source src="audio/s9_clean.wav"/>
@@ -294,7 +295,7 @@
               
             </div>
 
-      <strong> Sample 10 (<a href="https://github.com/Bose/devo/tree/main/audio/">DEVO demo</a>)</strong>
+      <strong> Sample 10 (<a href="https://github.com/Bose/devo/tree/main/audio/">DEVO demo</a>) - Static and impulsive noise</strong>
       <br>Generative models in general better resist the implusive bird chirping noise. Genhance produces the cleanest acoustic background.
       <div class="row text-center">
               <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
@@ -322,7 +323,7 @@
             </div>
 
 
-      <strong> Sample 11 (<a href="https://serrjoa.github.io/projects/universe/">SELM demo</a>)</strong>
+      <strong> Sample 11 (<a href="https://serrjoa.github.io/projects/universe/">SELM demo</a>) - Reverb + multiple noise</strong>
       <div class="row text-center">
               <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
                         <source src="audio/s11_clean.wav"/>
@@ -349,7 +350,7 @@
             </div>
 
       <!-- </ul> -->
-      <h4 id='ablations'>Comparison among different variants of Genhance</h4>
+      <h4 id='ablations'>Comparison among variants of Genhance</h4>
       <br> We noticed that the choice of pre-trained language features makes a difference in the accuracy of generated language content. However the perforcemance is not consistent. For example, in the following examples, WavLM feature leads to more stable content reconstruction in <i>sample 3</i> and <i>sample 4</i>, while Whipser performs better in <i>sample 6</i>. <br>
           <!-- <p>This section compares different variants of Genhancer. </p> -->
       <br><strong> Sample 1 (Real-world speech content)</strong>
@@ -504,7 +505,7 @@
                       </audio></strong></div>
             </div>
       <h4 id="more">More samples</h4>
-          <p>We also provide the first 10 samples of each evaluation set <a href="https://github.com/sophieymie/EnhancerMoreAudioSamples">here</a>, from five variants of Genhancer, namely, <i>MaskGIT + Whisper</i>, <i>MaskGIT + WavLM</i>, <i>MaskGIT + W2v-BERT2.0</i>, <i>AR + Whisper</i> and <i>FFDiscrete + Whisper</i>.</p>
+          <p>We also provide the first 10 gender-balanced samples of each evaluation set <a href="https://github.com/sophieymie/EnhancerMoreAudioSamples">here</a>, of five variants of Genhancer, namely, <i>MaskGIT + Whisper</i>, <i>MaskGIT + WavLM</i>, <i>MaskGIT + W2v-BERT2.0</i>, <i>AR + Whisper</i> and <i>FFDiscrete + Whisper</i>.</p>
 
 
       <h3 id='supplement'>Supplement</h3>
