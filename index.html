@@ -31,7 +31,7 @@
         <li><a href="#audiosamples">Audio samples</a>
           <ul>
             <li><a href="#closer">Closer comparison with other models</a></li>
-            <li><a href="#ablations">Comparison among variants of Genhance</a></li>  
+            <li><a href="#ablations">Comparison among variants of Genhancer</a></li>  
             <li><a href="#more">Link to more samples</a></li>  
           </ul>
         </li>
@@ -48,7 +48,7 @@
       <h3 id='audiosamples'>Audio samples </h3>
       <h4 id='closer'>Closer comparison with other models</h4>
           <p>This session provides a closer comparison among different models. The samples are collected from comparion models' demo pages, and include a wide range of in-the-wild enhancement scenarios.</p>
-          <p>If applicable, we present the provided enhanced samples from each model's own webpages. All the Genhancer samples are from the <i>MaskGIT+Whisper</i> model. If not noted otherwise, Miipher samples are generated <strong>with</strong> speaker condition, and <strong>without</strong> text condition. If not otherwise noted, all the provided samples in this section are at a sampling rate of 16kHz. </p>
+          <p>If applicable, we present the provided enhanced samples from each model's own webpages. All the Genhancer samples are from the <i>MaskGIT+Whisper</i> model. If not noted otherwise, Miipher samples are generated <strong>with</strong> speaker condition, and <strong>without</strong> text condition. While Genhancer does 44.1kHz enhancement, all the comparison models below operate at 16kHz, except for Miipher which is at 24kHz. Meanwhile, HiFi-GAN-2 has a built-in bandwidth extension module that can output 22kHz and 44.1kHz speech. For fair comparison, all the samples in this section are prepared for or downsampled to 16kHz, unless otherwise noted. </p>
 
       
       <!-- <ul><li><strong>Sample 1 (Miipher demo)</strong></li></ul> -->
@@ -57,19 +57,19 @@
      <br> Without any transcription prompt, Genhancer is able to recover the content well, comparable to Miipher with text, and clearly out-performs Miipher w/o text. 
 
       <div class="row text-center">
-        <div class="col-sm-2"><strong><br>Clean</strong> <br><audio controls=''>
+        <div class="col-sm-2"><strong><br>Clean (24kHz)</strong> <br><audio controls=''>
                   <source src="audio/s1_clean.wav"/>
                 </audio></div>
-        <div class="col-sm-2"><strong><br>Degraded<br> <audio controls=''>
+        <div class="col-sm-2"><strong><br>Degraded (24kHz)<br> <audio controls=''>
                   <source src="audio/s1_noisy.wav"/>
                 </audio></strong></div>
         <div class="col-sm-2 text-success"><strong><br>Genhancer<br> <audio controls=''>
                   <source src="audio/s1_genhancer.wav"/>
                 </audio></strong></div>
-        <div class="col-sm-2"><strong>Miipher w/o text(Original)<br> <audio controls=''>
+        <div class="col-sm-2"><strong>Miipher w/o text (24kHz, Original)<br> <audio controls=''>
                   <source src="audio/s1_miipher_wo_text.wav"/>
                 </audio></strong></div>
-        <div class="col-sm-2"><strong>Miipher w/ text(Original) <br> <audio controls=''>
+        <div class="col-sm-2"><strong>Miipher w/ text (24kHz, Original) <br> <audio controls=''>
                   <source src="audio/s1_miipher_w_text.wav"/>
                 </audio></strong></div>
         <div class="col-sm-2 "><strong><br>HiFi-GAN-2<br> <audio controls=''>
@@ -83,16 +83,16 @@
       <!-- <strong>Unseen distortion</strong> -->
 <!--       <br>This samples shows an example of difficult degradation compounding reverberation and severe pitch distortion, a case that Genhancer didn't see during training. It was able to generate a relatively clean audio, but with certain hullacinated segments. -->
       <div class="row text-center">
-        <div class="col-sm-2"><strong><br>Clean<br> <audio controls=''>
+        <div class="col-sm-2"><strong><br>Clean (24kHz)<br> <audio controls=''>
                   <source src="audio/s2_clean.wav"/>
                 </audio></strong></div>
-        <div class="col-sm-2"><strong><br>Degraded<br> <audio controls=''>
+        <div class="col-sm-2"><strong><br>Degraded (24kHz)<br> <audio controls=''>
                   <source src="audio/s2_noisy.wav"/>
                 </audio></strong></div>
         <div class="col-sm-2 text-success"><strong><br>Genhancer<br> <audio controls=''>
                   <source src="audio/s2_genhancer.wav"/>
                 </audio></strong></div>
-        <div class="col-sm-2"><strong>Miipher w/o text(Original)<br> <audio controls=''>
+        <div class="col-sm-2"><strong>Miipher w/o text (24kHz, Original)<br> <audio controls=''>
                   <source src="audio/s2_miipher.wav"/>
                 </audio></strong></div>
         <div class="col-sm-2"><strong><br>StoRm <br> <audio controls=''>
@@ -299,7 +299,7 @@
             </div>
       <strong> Sample 10 (<a href="https://github.com/Bose/devo/tree/main/audio/">DEVO demo</a>) - Reverb + noise</strong>
      <!--  <br>Out of all generative and non-generative methods, Genhancer provides the most faithful content reconstruction. --> 
-     <br> Genhance produces correct content and stable pitch, prosody and speaker. 
+     <br> Genhancer produces correct content and stable pitch, prosody and speaker. 
       <div class="row text-center">
               <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
                         <source src="audio/s9_clean.wav"/>
@@ -326,7 +326,7 @@
             </div>
 
       <strong> Sample 11 (<a href="https://github.com/Bose/devo/tree/main/audio/">DEVO demo</a>) - Reverb + noise</strong>
-      <br>Generative models in general better resist the implusive bird chirping noise. Genhance produces the cleanest acoustic background.
+      <br>Generative models in general better resist the implusive bird chirping noise. Genhancer produces the cleanest acoustic background.
       <div class="row text-center">
               <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
                         <source src="audio/s10_clean.wav"/>
@@ -379,7 +379,7 @@
             </div>
 
       <!-- </ul> -->
-      <h4 id='ablations'>Comparison among variants of Genhance</h4>
+      <h4 id='ablations'>Comparison among variants of Genhancer</h4>
       <!-- <br> We noticed that the choice of pre-trained language features makes a difference in the accuracy of generated language content. However the perforcemance is not consistent. For example, in the following examples, WavLM feature leads to more stable content reconstruction in <i>sample 3</i> and <i>sample 4</i>, while Whipser performs better in <i>sample 6</i>. <br> -->
       We observed that: 
       <ul>
