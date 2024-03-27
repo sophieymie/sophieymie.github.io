@@ -50,13 +50,13 @@
           <p>This session provides a closer comparison among different models. The samples are collected from comparion models' demo pages, and include a wide range of in-the-wild enhancement scenarios.</p>
           <p>If applicable, we present the provided enhanced samples from each model's own webpages. All the Genhancer samples are from the <i>MaskGIT+Whisper</i> model. If not noted otherwise, Miipher samples are generated <strong>with</strong> speaker condition, and <strong>without</strong> text condition. </p>
 
-          <p>Genhancer runs enhancement at 44.1kHz; Miipher at 24kHz. All other models included below operate at 16kHz. HiFi-GAN-2 has a built-in bandwidth extension module and can thus provide 16kHz, 22.05kHz, or 44.1kHz output. For fair comparison, all the samples in this section are prepared for or downsampled to 16kHz unless otherwise noted.</p>
+          <p>Genhancer runs enhancement at 44.1kHz; Miipher [1] at 24kHz. All other models included below operate at 16kHz. HiFi-GAN-2 [2] has a built-in bandwidth extension module and can thus provide 16kHz, 22.05kHz, or 44.1kHz output. For fair comparison, all the samples in this section are prepared for or downsampled to 16kHz unless otherwise noted.</p>
 
       
       <!-- <ul><li><strong>Sample 1 (Miipher demo)</strong></li></ul> -->
       <!-- <span> -->
-     <strong> Sample 1 (<a href="https://google.github.io/df-conformer/miipher/">Miipher demo</a>) - Reverb + noise</strong>
-     <br> Without any transcription prompt, Genhancer is able to recover the content well, comparable to Miipher with text, and clearly out-performs Miipher w/o text. 
+     <strong> Sample 1 - Reverb + noise</strong> (<a href="https://google.github.io/df-conformer/miipher/">Miipher demo</a>)
+     <br> Without transcription prompt, Genhancer is able to recover the content well, comparable to Miipher with text, and clearly out-performs Miipher w/o text. 
 
       <div class="row text-center">
         <div class="col-sm-2"><strong><br>Clean (24kHz)</strong> <br><audio controls=''>
@@ -65,8 +65,8 @@
         <div class="col-sm-2"><strong><br>Degraded (24kHz)<br> <audio controls=''>
                   <source src="audio/s1_noisy.wav"/>
                 </audio></strong></div>
-        <div class="col-sm-2 text-success"><strong><br>Genhancer<br> <audio controls=''>
-                  <source src="audio/s1_genhancer.wav"/>
+        <div class="col-sm-2 text-success"><strong><br>Genhancer (24kHz)<br> <audio controls=''>
+                  <source src="audio/s1_genhancer_24k.wav"/>
                 </audio></strong></div>
         <div class="col-sm-2"><strong>Miipher w/o text (24kHz, Original)<br> <audio controls=''>
                   <source src="audio/s1_miipher_wo_text.wav"/>
@@ -74,15 +74,14 @@
         <div class="col-sm-2"><strong>Miipher w/ text (24kHz, Original) <br> <audio controls=''>
                   <source src="audio/s1_miipher_w_text.wav"/>
                 </audio></strong></div>
-        <div class="col-sm-2 "><strong><br>HiFi-GAN-2<br> <audio controls=''>
-                  <source src="audio/s1_hifigan2.wav"/>
+        <div class="col-sm-2 "><strong><br>HiFi-GAN-2 (24kHz)<br> <audio controls=''>
+                  <source src="audio/s1_hifigan2_24k.wav"/>
                 </audio></strong></div>
         <br>&nbsp&nbsp&nbsp<i>Transcript: Attempting to appease dictatorial regimes with custom beanie babies is a tried and true strategy.</i>
       </div>
 
 
-      <strong>Sample 2 (<a href="https://google.github.io/df-conformer/miipher/">Miipher demo</a>) - Reverb + noise</strong><!-- <strong> - Deverberation + noisy; Low SDR</strong> -->
-      <!-- <strong>Unseen distortion</strong> -->
+      <strong>Sample 2 - Reverb + noise</strong> (<a href="https://google.github.io/df-conformer/miipher/">Miipher demo</a>)
 <!--       <br>This samples shows an example of difficult degradation compounding reverberation and severe pitch distortion, a case that Genhancer didn't see during training. It was able to generate a relatively clean audio, but with certain hullacinated segments. -->
       <div class="row text-center">
         <div class="col-sm-2"><strong><br>Clean (24kHz)<br> <audio controls=''>
@@ -91,24 +90,27 @@
         <div class="col-sm-2"><strong><br>Degraded (24kHz)<br> <audio controls=''>
                   <source src="audio/s2_noisy.wav"/>
                 </audio></strong></div>
-        <div class="col-sm-2 text-success"><strong><br>Genhancer<br> <audio controls=''>
-                  <source src="audio/s2_genhancer.wav"/>
+        <div class="col-sm-2 text-success"><strong><br>Genhancer (24kHz)<br> <audio controls=''>
+                  <source src="audio/s2_genhancer_24k.wav"/>
+                </audio></strong></div>
+        <div class="col-sm-2 text-success"><strong>Genhancer (44.1kHz)<br> <audio controls=''>
+                  <source src="audio/s2_genhancer_44k.wav"/>
                 </audio></strong></div>
         <div class="col-sm-2"><strong>Miipher w/o text (24kHz, Original)<br> <audio controls=''>
                   <source src="audio/s2_miipher.wav"/>
                 </audio></strong></div>
-        <div class="col-sm-2"><strong><br>StoRm <br> <audio controls=''>
-                  <source src="audio/s2_storm.wav"/>
-                </audio></strong></div>
-        <div class="col-sm-2"><strong><br>HiFi-GAN-2<br> <audio controls=''>
-                  <source src="audio/s2_hifigan2.wav"/>
+<!--         <div class="col-sm-2"><strong><br>StoRm <br> <audio controls=''>
+                  <source src="audio/s2_storm.wav"/> -->
+                <!-- </audio></strong></div> -->
+        <div class="col-sm-2"><strong><br>HiFi-GAN-2 (24kHz)<br> <audio controls=''>
+                  <source src="audio/s2_hifigan2_24k.wav"/>
                 </audio></strong></div>
         <br>&nbsp&nbsp&nbsp<i>Transcript: The Albanian Minister sidestepped the Italian Military Mission, and appointed himself Chief of Staff.</i> 
       </div>
       
 
 
-      <strong> Sample 3 (<a href="https://dns-gen.github.io/">Low-latency SE demo</a>) - Reverb + noise</strong>
+      <strong> Sample 3 - Reverb + noise</strong> (<a href="https://dns-gen.github.io/">Low-latency SE [3] demo</a>)
 <!--       <br>Here is an example where background switches among different noisy and effects, it's thus particularly important to maintain a global coherence on speaker and prosody. -->
       <br>This is a challenging example where the speech is barely intelligible towards the end of the utterance. All the generative methods display certain degree of hallucination. Our method sticks closer to the original speaker’s voice and speech content than others, but it can still produce robotic voice artifacts when uncertainty is high. 
       <div class="row text-center">
@@ -136,7 +138,7 @@
         
       </div>
 
-      <strong> Sample 4 (<a href="https://dns-gen.github.io/">Low-latency SE demo</a>) - Noise + distortion</strong>
+      <strong> Sample 4 - Noise + distortion</strong> (<a href="https://dns-gen.github.io/">Low-latency SE [3] demo</a> )
 <!--       <br>Here is an example where background switches among different noisy and effects, it's thus particularly important to maintain a global coherence on speaker and prosody. -->
       <div class="row text-center">
 <!--         <div class="col-sm-2"><strong><br>Clean<br> <audio controls=''>
@@ -154,7 +156,7 @@
         <div class="col-sm-2"><strong><br>Miipher<br> <audio controls=''>
                   <source src="audio/s12_miipher.wav"/>
                 </audio></strong></div>
-        <div class="col-sm-2"><strong><br>StoRm <br> <audio controls=''>
+        <div class="col-sm-2"><strong><br>StoRm [4]<br> <audio controls=''>
                   <source src="audio/s12_storm.wav"/>
                 </audio></strong></div>
         <div class="col-sm-2"><strong><br>HiFi-GAN-2<br> <audio controls=''>
@@ -164,7 +166,7 @@
       </div>
 
 
-      <strong> Sample 5 (<a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm">StoRm demo</a>)- Reverb + noise</strong>
+      <strong> Sample 5 - Reverb + noise</strong> (<a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm">StoRm demo</a>)
 <!--       <br>Appearing in the tail is a soft female voice, which is leaked into some enhanced samples, and/or causes EQ distortion. Genhancer is robust to this intereference.</p> -->
       <div class="row text-center">
         <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
@@ -179,7 +181,7 @@
         <div class="col-sm-2"><strong>Miipher<br> <audio controls=''>
                   <source src="audio/s4_miipher.wav"/>
                 </audio></strong></div>
-        <div class="col-sm-2"><strong>StoRm (Original) <br> <audio controls=''>
+        <div class="col-sm-2"><strong>StoRm (Original)<br> <audio controls=''>
                   <source src="audio/s4_storm.mp3"/>
                 </audio></strong></div>
         <div class="col-sm-2"><strong>HiFi-GAN-2<br> <audio controls=''>
@@ -189,7 +191,7 @@
       </div>
 
 
-      <strong>Sample 6 (<a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm">StoRm demo</a>) - Strong reverb</strong>
+      <strong>Sample 6 - Strong reverb</strong> (<a href="https://www.inf.uni-hamburg.de/en/inst/ab/sp/publications/storm">StoRm demo</a>) 
       <!-- <strong>Severe reverberation</strong> -->
       <br>This sample shows Genhancer is robust to strong reverberation. Meanwhile, we can observe that as a non-generative model, HiFi-GAN-2 is more susceptible to the adversial audio effect from input, although it was able to preserve the content to a fairly good extend. In contrast, all other generative models provide a much cleaner acoustic environment.
 
@@ -218,8 +220,8 @@
 
       
 
-      <strong> Sample 7 (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE demo</a>)</strong>
-      <strong>- Other language</strong>
+      <strong> Sample 7</strong>
+      <strong>- Other language</strong>  (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE [5] demo</a> )
       <br>An example in a different language, that wasn't included in the training set.
       <div class="row text-center">
 <!--         <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
@@ -247,8 +249,8 @@
       </div>
 
 
-      <strong> Sample 8 (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE demo</a>)</strong>
-      <strong> - Out-of-distribution spoken style</strong>
+      <strong> Sample 8</strong>
+      <strong> - Out-of-distribution spoken style</strong>  (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE demo</a>)
       <br>The speaker of this sample shows strong emotion by his changing pitch and tones in voice. In constrast to Miipher, Genhancer is capable of preserving the emotion, which we attribute to the use of codec token for providing more complete acoustic information. 
       <div class="row text-center">
               <div class="col-sm-2"><strong>Degraded<br> <audio controls=''>
@@ -273,7 +275,7 @@
             </div>
 
 
-      <strong> Sample 9 (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE demo</a>) - Multi-speaker</strong> 
+      <strong> Sample 9 - Multi-speaker</strong>  (<a href="https://serrjoa.github.io/projects/universe/">UNIVERSE demo</a>) 
       <br>Although trained with language modeling, our method smoothly transits between two speakers and keeps their identities, thanks to the look-around capability of MaskGIT and the additional branch of local context
       <div class="row text-center">
               <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
@@ -299,7 +301,7 @@
                       </audio></strong></div>
               
             </div>
-      <strong> Sample 10 (<a href="https://github.com/Bose/devo/tree/main/audio/">DEVO demo</a>) - Reverb + noise</strong>
+      <strong> Sample 10 - Reverb + noise</strong> (<a href="https://github.com/Bose/devo/tree/main/audio/">DEVO [6 ]demo</a>) 
      <!--  <br>Out of all generative and non-generative methods, Genhancer provides the most faithful content reconstruction. --> 
      <br> Genhancer produces correct content and stable pitch, prosody and speaker. 
       <div class="row text-center">
@@ -327,7 +329,7 @@
               
             </div>
 
-      <strong> Sample 11 (<a href="https://github.com/Bose/devo/tree/main/audio/">DEVO demo</a>) - Reverb + noise</strong>
+      <strong> Sample 11 - Reverb + noise</strong> (<a href="https://github.com/Bose/devo/tree/main/audio/">DEVO demo</a>) 
       <br>Generative models in general better resist the implusive bird chirping noise. Genhancer produces the cleanest acoustic background.
       <div class="row text-center">
               <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
@@ -354,7 +356,7 @@
               
             </div>
 
-      <strong> Sample 12 (<a href="https://honee-w.github.io/SELM/">SELM demo</a>) - Reverb + noise</strong>
+      <strong> Sample 12 - Reverb + noise</strong> (<a href="https://honee-w.github.io/SELM/">SELM [7] demo</a>) 
       <div class="row text-center">
               <div class="col-sm-2"><strong>Clean<br> <audio controls=''>
                         <source src="audio/s11_clean.wav"/>
@@ -548,6 +550,7 @@
       <h3 id='supplement'>Supplement</h3>
       <h4 id="design">Network design</h4>
       <!-- <br> -->
+      Closer look at the DF-Conformer [8] backbone.
       <p>-<strong> Feedforward noisy branch</strong></p>
       <p><img src='imgs/ff_network.png'></p>
       <p>-<strong> Token Generator</strong></p>
@@ -555,7 +558,7 @@
 
 
       <ul>
-        <li>Q = 9, number of codebooks in DAC</li>
+        <li>Q = 9, number of codebooks in DAC [9]</li>
         <li>D = 8, code dimension by DAC</li>
         <li>S = 4096, codebook size by DAC</li>
         <li>C'= 256, C = 512</li>
@@ -570,6 +573,16 @@
         <li>Learning rate linearly increases to 1e-4 in the first 1k steps, and decays to 1e-5 following cosine schedule in 300k steps.</li>
        </ul>
 
+    <h4 id='reference'>Reference</h4>
+    [1] Koizumi, Yuma, et al. "Miipher: A robust speech restoration model integrating self-supervised speech and text representations." 2023 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA). IEEE, 2023.
+    <br>[2] Su, Jiaqi, Zeyu Jin, and Adam Finkelstein. "HiFi-GAN-2: Studio-quality speech enhancement via generative adversarial networks conditioned on acoustic features." 2021 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA). IEEE, 2021.
+    <br>[3] Xue, Huaying, Xiulian Peng, and Yan Lu. "Low-latency Speech Enhancement via Speech Token Generation." arXiv preprint arXiv:2310.08981 (2023).
+    <br>[4] J. -M. Lemercier, J. Richter, S. Welker and T. Gerkmann, "StoRM: A Diffusion-Based Stochastic Regeneration Model for Speech Enhancement and Dereverberation," in IEEE/ACM Transactions on Audio, Speech, and Language Processing, vol. 31, pp. 2724-2737, 2023, doi: 10.1109/TASLP.2023.3294692.
+    <br>[5] Serrà, Joan, et al. "Universal speech enhancement with score-based diffusion." arXiv preprint arXiv:2206.03065 (2022).
+    <br>[6] Irvin, Bryce, et al. "Self-supervised learning for speech enhancement through synthesis." ICASSP 2023-2023 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP). IEEE, 2023.
+    <br>[7] Wang, Ziqian, et al. "SELM: Speech Enhancement Using Discrete Tokens and Language Models." arXiv preprint arXiv:2312.09747 (2023).
+    <br>[8] Koizumi, Yuma, et al. "DF-Conformer: Integrated architecture of Conv-TasNet and Conformer using linear complexity self-attention for speech enhancement." 2021 IEEE Workshop on Applications of Signal Processing to Audio and Acoustics (WASPAA). IEEE, 2021.
+    <br>[9] Kumar, Rithesh, et al. "High-fidelity audio compression with improved rvqgan." Advances in Neural Information Processing Systems 36 (2024).
     </div> <!-- /container -->
   </body>
 </html>
